@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+// Variáveis de cores
+$color-bg: #34495e;
+$color-white: white;
+$color-green: #1abc9c;
+$color-red: #e74c3c;
+$color-blue: #3498db;
+$color-purple: #9b59b6;
+$color-orange: #e67e22;
+$color-body-bg: #2c3e50;
+$color-text: #ecf0f1;
+
+nav {
+  margin: 27px auto 0;
+  position: relative;
+  width: 590px;
+  height: 50px;
+  background-color: $color-bg;
+  border-radius: 8px;
+  font-size: 0;
+
+  a {
+    line-height: 50px;
+    height: 100%;
+    font-size: 15px;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    color: $color-white;
+    cursor: pointer;
+
+    &:nth-child(1) {
+      width: 100px;
+    }
+    &:nth-child(2) {
+      width: 110px;
+    }
+    &:nth-child(3) {
+      width: 100px;
+    }
+    &:nth-child(4) {
+      width: 160px;
+    }
+    &:nth-child(5) {
+      width: 120px;
+    }
+  }
+
+  .animation {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    z-index: 0;
+    transition: all 0.5s ease 0s;
+    border-radius: 8px;
+  }
+
+  .start-home,
+  a:nth-child(1):hover ~ .animation {
+    width: 100px;
+    left: 0;
+    background-color: $color-green;
+  }
+  .start-about,
+  a:nth-child(2):hover ~ .animation {
+    width: 110px;
+    left: 100px;
+    background-color: $color-red;
+  }
+  .start-blog,
+  a:nth-child(3):hover ~ .animation {
+    width: 100px;
+    left: 210px;
+    background-color: $color-blue;
+  }
+  .start-portefolio,
+  a:nth-child(4):hover ~ .animation {
+    width: 160px;
+    left: 310px;
+    background-color: $color-purple;
+  }
+  .start-contact,
+  a:nth-child(5):hover ~ .animation {
+    width: 120px;
+    left: 470px;
+    background-color: $color-orange;
+  }
+}
+
+body {
+  font-size: 12px;
+  font-family: sans-serif;
+  background: $color-body-bg;
+}
+
+h1 {
+  text-align: center;
+  margin: 50px 0;
+  font-size: 70px;
+  color: #2bd6b9;
+  text-shadow: 2px 2px 4px #000000;
+  font-family: "Cherry Swash", cursive;
+}
+
+p {
+  position: center;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  color: #0c091a;
+  font-family: "Arial, sans-serif;", cursive;
+  font-size: 20px;
+}
+
+span {
+  color: #2bd6b4;
+}
+
+.produtos {
+  max-width: 640px;
+  width: 100%;
+  margin: 50px auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); // Usando repeat para mais clareza
+  grid-column-gap: 5%;
+  // ... outras regras ...
+}
+.produto {
+  border: 5px solid #f3f70ff1; // Borda sutil ao redor do produto
+  border-radius: 15px; // Bordas arredondadas
+  padding: 10px; // Espaçamento interno
+  text-align: center; // Centraliza o texto dentro do produto
+  transition: transform 0.3s; // Efeito de transição suave ao passar o mouse
+  background-color: #78ecfc;
+  border: 12px solid rgb(236, 11, 11); // Borda mais destacada
+  padding: 20px; // Espaçamento interno adicional
+  // Fundo amarelo para destaque
+
+  &:hover {
+    transform: scale(1.7); // Aumenta levemente o tamanho ao passar o mouse
+  }
+
+  &__imagem {
+    width: 100%; // Imagem ocupa toda a largura do produto
+  }
+
+  &__nome {
+    font-size: 1.2em; // Tamanho do nome do produto
+    margin: 8px 0; // Espaçamento acima e abaixo do nome
+  }
+
+  &__descricao {
+    color: gray; // Cor da descrição do produto
+  }
+}
