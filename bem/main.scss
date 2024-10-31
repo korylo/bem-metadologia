@@ -32,12 +32,10 @@
 }
 
 .produto-descricao {
-  /* elemento */
   color: gray;
 }
 
-.em-destaque {
-  /* modificador */
+.produto--em-destaque {
   border: 2px solid rgb(151, 130, 8);
   padding: 8px;
   background-color: #ffff42;
